@@ -1,0 +1,92 @@
+/* Card.css */
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  background-color: #fefef4;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  max-width: 1720px;
+  height: auto;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 30px;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+ margin-top: 20rem;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.card-button {
+  width: 180px;
+  height: 60px;
+  border-radius: 100px;
+  background: #fefef4;
+  color: #2d3b36;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card-button:hover {
+  background-color: #e6e6d8;
+}
+
+.card-below-text {
+  margin-top: 3rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #2d3b36;
+}
+
+@media (max-width: 768px) {
+  .card-text {
+    font-size: 42px;
+  }
+
+  .card-below-text {
+    font-size: 32px;
+  }
+
+  .card-button {
+    width: 140px;
+    height: 50px;
+    font-size: 14px;
+  }
+}

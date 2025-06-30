@@ -1,0 +1,130 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f8ee;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px 0;
+}
+
+.logo {
+  width: 156px;
+  height: 22px;
+  font-weight: 800;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: rgba(45, 59, 54, 1);
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: rgba(45, 59, 54, 1);
+  margin: 0;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  color: rgba(45, 59, 54, 1);
+}
+
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px;
+  position: relative;
+}
+
+.text-block {
+  width: 335px;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(45, 59, 54, 1);
+  text-indent: 105px;
+}
+
+.headline h1 {
+  width: 398px;
+  height: 253px;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 90px;
+  letter-spacing: -3%;
+  text-transform: uppercase;
+  color: rgba(45, 59, 54, 1);
+  margin: 0;
+}
+
+.product-image img {
+  width: 222.6px;
+  height: 220px;
+  border-radius: 20px;
+}
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px;
+  gap: 80px; /* Increased gap between sections */
+}
+
+/* LEFT */
+.text-block {
+  flex: 1;
+  max-width: 335px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-indent: 30px;
+}
+
+/* CENTER */
+.headline {
+  flex: 1;
+  text-align: center;
+  min-width: 400px;
+}
+
+/* RIGHT */
+.product-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 230px;
+}
+
+.product-image img {
+  width: 222px;
+  height: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.headline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1; /* ensure it's above background */
+}
+
+.headline h1 {
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 90px;
+  text-transform: uppercase;
+  color: rgba(45, 59, 54, 1);
+  margin: 0;
+}

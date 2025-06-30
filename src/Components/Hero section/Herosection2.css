@@ -1,0 +1,135 @@
+/* WhyProductCardFull.css */
+
+.why-card-full {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 80px 100px;
+  background-color: #FEFFF4;
+}
+
+.left-section {
+  flex: 1 1 50%;
+}
+
+.why-button {
+  width: 260px;
+  height: 60px;
+  border-radius: 100px;
+  background: rgba(254, 255, 244, 1);
+  border: 1px solid rgba(45, 59, 54, 1);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.main-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: rgba(45, 59, 54, 1);
+  margin-bottom: 1.5rem;
+}
+
+.main-description {
+  width: 100%;
+  max-width: 605px;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: rgba(82, 83, 73, 1);
+  margin-bottom: 3rem;
+}
+
+.feature-block {
+  margin-bottom: 2.5rem;
+}
+
+.feature-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: rgba(45, 59, 54, 1);
+  margin-bottom: 0.5rem;
+}
+
+.feature-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: rgba(82, 83, 73, 1);
+  max-width: 401px;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: rgba(45, 59, 54, 1);
+  margin-top: 3rem;
+}
+
+.right-section {
+  flex: 1 1 40%;
+  position: relative;
+  text-align: center;
+  max-width: 500px;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.award-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: white;
+  border: 2px solid #0A84FF;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(45, 59, 54, 1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .why-card-full {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .main-heading {
+    font-size: 36px;
+  }
+
+  .feature-title {
+    font-size: 32px;
+  }
+
+  .right-section {
+    max-width: 100%;
+  }
+
+  .footer-text {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
