@@ -1,22 +1,27 @@
-/* Base Styles */
+/* ----------------------------
+   ✅ Base & Global Styles
+---------------------------- */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: #f5f8ee;
 }
 
+/* ----------------------------
+   ✅ Navbar Styling
+---------------------------- */
 .navbar {
-  position: fixed; /* or use fixed if you want always at top */
+  position: fixed;
   top: 0;
-  z-index: 999; /* make sure it's above all content */
-  background-color: #f5f8ee; /* same as body to avoid transparency */
+  z-index: 999;
+  width: 100%;
+  background-color: #f5f8ee;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 50px 100px 0;
   flex-wrap: wrap;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* optional subtle shadow */
-  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -30,12 +35,17 @@ body {
   display: flex;
   gap: 40px;
   list-style: none;
-  font-weight: 400;
   font-size: 20px;
+  font-weight: 400;
   text-transform: capitalize;
   color: rgba(45, 59, 54, 1);
   margin: 0;
   padding: 0;
+}
+
+.nav-tabs li a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .icons {
@@ -45,20 +55,61 @@ body {
   color: rgba(45, 59, 54, 1);
 }
 
+/* ----------------------------
+   ✅ Hamburger for Mobile
+---------------------------- */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: rgba(45, 59, 54, 1);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .nav-tabs {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-tabs.open {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 20px 0;
+    gap: 1rem;
+  }
+
+  .icons {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 15px;
+    font-size: 16px;
+  }
+}
+
+/* ----------------------------
+   ✅ Main Section Layout
+---------------------------- */
 .main-section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 100px;
-  gap: 80px;
   flex-wrap: wrap;
-
-  padding-top: 200px; /* adjust based on navbar height */
-
-
+  gap: 80px;
+  padding: 200px 100px 100px; /* extra top padding due to fixed navbar */
 }
 
-/* LEFT */
 .text-block {
   flex: 1;
   max-width: 335px;
@@ -68,7 +119,6 @@ body {
   text-indent: 30px;
 }
 
-/* CENTER */
 .headline {
   position: absolute;
   top: 50%;
@@ -88,7 +138,6 @@ body {
   margin: 0;
 }
 
-/* RIGHT */
 .product-image {
   flex: 1;
   display: flex;
@@ -103,9 +152,9 @@ body {
   object-fit: cover;
 }
 
-/* ---------------------------
-   ✅ RESPONSIVE STYLING
---------------------------- */
+/* ----------------------------
+   ✅ Responsive Adjustments
+---------------------------- */
 @media (max-width: 1024px) {
   .navbar {
     padding: 30px 40px 0;
@@ -123,26 +172,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 30px 20px 0;
-    gap: 1rem;
-  }
-
-  .nav-tabs {
-    flex-direction: column;
-    gap: 10px;
-    font-size: 16px;
-  }
-
-  .icons {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 15px;
-    font-size: 16px;
-  }
-
   .headline h1 {
     font-size: 50px;
     line-height: 60px;
