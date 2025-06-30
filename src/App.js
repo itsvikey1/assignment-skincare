@@ -4,16 +4,16 @@ import Navbar from '../src/Components/navbar/Navbar';
 import Herosection1 from './Components/Hero section/Herosection1';
 import Herosection2 from './Components/Hero section/Herosection2';
 import BestSellingSlider from './Components/slide/BestSellingSlider';
-import MainSection from "./Components/navbar/Navbar";
+
 import Card from './Components/card/Card';
 import Card2 from './Components/card/Card2';
 import Footer from './Components/Footer/Footer';
-const AllProducts = () => <h2>All Products Page</h2>;
-const Serum = () => <h2>Serum Page</h2>;
-const Sunscreen = () => <h2>Sunscreen Page</h2>;
-const Bundle = () => <h2>Bundle Page</h2>;
-const Cart = () => <h2>Cart Page</h2>;
-const Admin = () => <h2>Admin Panel</h2>;
+const AllProducts = () => <p>.</p>;
+const Serum = () => <p>.</p>;
+const Sunscreen = () => <p>.</p>;
+const Bundle = () =>  <p>.</p>;
+const Cart = () => <p>.</p>;
+const Admin = () => <p>.</p>;
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
       <Card2/>
       <Footer/>
         <Routes>
-          <Route path="/" element={<MainSection />} />
+          
         <Route path="/products" element={<AllProducts />} />
         <Route path="/serum" element={<Serum />} />
         <Route path="/sunscreen" element={<Sunscreen />} />
