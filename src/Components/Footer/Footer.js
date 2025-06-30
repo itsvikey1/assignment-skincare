@@ -14,18 +14,19 @@ function Footer() {
         </div>
       </div>
 
-      <div className="footer-links">
-        <div className="social-links">
-          <span>Facebook</span>
-          <span>Instagram</span>
-          <span>YouTube</span>
-        </div>
-        <div className="policy-links">
-          <span>Terms of Service</span>
-          <span>Privacy Policy</span>
-          <span>Cookies Policy</span>
-        </div>
-      </div>
+     <div className="footer-bottom">
+  <div className="footer-bottom-left">
+    <span>Facebook</span>
+    <span>Instagram</span>
+    <span>YouTube</span>
+  </div>
+  <div className="footer-bottom-right">
+    <span>Terms of Service</span>
+    <span>Privacy Policy</span>
+    <span>Cookies Policy</span>
+  </div>
+</div>
+
 
       <div className="footer-banner">SKINCARE</div>
     </footer>

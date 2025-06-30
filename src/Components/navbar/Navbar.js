@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import productImage from ".//img/hero img1.jpg";
 
@@ -7,11 +8,12 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">SKINCARE</div>
-      <ul className="nav-tabs">
-        <li>All Products</li>
-        <li>Serum</li>
-        <li>Sunscreen</li>
-        <li>Bundle</li>
+       <ul className="nav-tabs">
+        <li><Link to="/products">All Products</Link></li>
+        <li><Link to="/serum">Serum</Link></li>
+        <li><Link to="/sunscreen">Sunscreen</Link></li>
+        <li><Link to="/bundle">Bundle</Link></li>
+        
       </ul>
       <div className="icons">
         <span className="icon">♡</span>

@@ -1,4 +1,4 @@
-/* styles.css */
+/* Base Styles */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -6,15 +6,20 @@ body {
 }
 
 .navbar {
+  position: fixed; /* or use fixed if you want always at top */
+  top: 0;
+  z-index: 999; /* make sure it's above all content */
+  background-color: #f5f8ee; /* same as body to avoid transparency */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 50px 100px 0;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* optional subtle shadow */
+  width: 100%;
 }
 
 .logo {
-  width: 156px;
-  height: 22px;
   font-weight: 800;
   font-size: 30px;
   text-transform: uppercase;
@@ -30,6 +35,7 @@ body {
   text-transform: capitalize;
   color: rgba(45, 59, 54, 1);
   margin: 0;
+  padding: 0;
 }
 
 .icons {
@@ -44,40 +50,12 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   padding: 100px;
-  position: relative;
-}
+  gap: 80px;
+  flex-wrap: wrap;
 
-.text-block {
-  width: 335px;
-  font-size: 20px;
-  font-weight: 400;
-  color: rgba(45, 59, 54, 1);
-  text-indent: 105px;
-}
+  padding-top: 200px; /* adjust based on navbar height */
 
-.headline h1 {
-  width: 398px;
-  height: 253px;
-  font-weight: 700;
-  font-size: 100px;
-  line-height: 90px;
-  letter-spacing: -3%;
-  text-transform: uppercase;
-  color: rgba(45, 59, 54, 1);
-  margin: 0;
-}
 
-.product-image img {
-  width: 222.6px;
-  height: 220px;
-  border-radius: 20px;
-}
-.main-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 100px;
-  gap: 80px; /* Increased gap between sections */
 }
 
 /* LEFT */
@@ -92,9 +70,22 @@ body {
 
 /* CENTER */
 .headline {
-  flex: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 1;
   min-width: 400px;
+}
+
+.headline h1 {
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 90px;
+  text-transform: uppercase;
+  color: rgba(45, 59, 54, 1);
+  margin: 0;
 }
 
 /* RIGHT */
@@ -111,20 +102,78 @@ body {
   border-radius: 20px;
   object-fit: cover;
 }
-.headline {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 1; /* ensure it's above background */
+
+/* ---------------------------
+   ✅ RESPONSIVE STYLING
+--------------------------- */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 30px 40px 0;
+  }
+
+  .nav-tabs {
+    gap: 25px;
+    font-size: 18px;
+  }
+
+  .headline h1 {
+    font-size: 70px;
+    line-height: 75px;
+  }
 }
 
-.headline h1 {
-  font-weight: 700;
-  font-size: 100px;
-  line-height: 90px;
-  text-transform: uppercase;
-  color: rgba(45, 59, 54, 1);
-  margin: 0;
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 20px 0;
+    gap: 1rem;
+  }
+
+  .nav-tabs {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  .icons {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 15px;
+    font-size: 16px;
+  }
+
+  .headline h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .text-block {
+    max-width: 100%;
+    font-size: 18px;
+    text-indent: 0;
+  }
+
+  .main-section {
+    padding: 60px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .headline h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
 }

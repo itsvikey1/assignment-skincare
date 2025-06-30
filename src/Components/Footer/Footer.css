@@ -4,6 +4,7 @@
   padding: 100px 100px 150px;
   position: relative;
   color: rgba(231, 232, 224, 1);
+  font-family: 'Inter', sans-serif;
 }
 
 .footer-top {
@@ -16,7 +17,6 @@
 }
 
 .footer-left h2 {
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 60px;
   line-height: 1;
@@ -26,7 +26,6 @@
 }
 
 .footer-right h4 {
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 1;
@@ -35,12 +34,12 @@
 }
 
 .footer-right p {
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 60px;
   line-height: 1;
   letter-spacing: -0.02em;
   margin: 0;
+  color: rgba(231, 232, 224, 1);
 }
 
 .footer-bottom {
@@ -64,7 +63,6 @@
 
 .footer-bottom-left span,
 .footer-bottom-right span {
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 1;
@@ -72,6 +70,13 @@
   color: rgba(239, 245, 225, 1);
   text-transform: capitalize;
   white-space: nowrap;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.footer-bottom-left span:hover,
+.footer-bottom-right span:hover {
+  opacity: 0.8;
 }
 
 .footer-banner {
@@ -80,7 +85,6 @@
   left: -115px;
   width: 2149px;
   height: 305px;
-  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 420px;
   line-height: 1;
@@ -89,4 +93,58 @@
   z-index: 0;
   pointer-events: none;
   user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-left h2 {
+    font-size: 48px;
+  }
+
+  .footer-right p {
+    font-size: 40px;
+  }
+
+  .footer-right h4 {
+    font-size: 24px;
+  }
+
+  .footer-banner {
+    font-size: 200px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 60px 20px 120px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-bottom-left,
+  .footer-bottom-right {
+    gap: 1.5rem;
+    justify-content: flex-start;
+  }
+
+  .footer-banner {
+    font-size: 150px;
+    height: auto;
+  }
+
+  .footer-left h2,
+  .footer-right p {
+    font-size: 32px;
+  }
 }

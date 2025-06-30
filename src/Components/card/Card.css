@@ -7,15 +7,15 @@
   padding: 4rem 1rem;
   background-color: #fefef4;
 }
-
 .card-container {
   position: relative;
   width: 100%;
   max-width: 1720px;
   height: auto;
   border-radius: 30px;
-  overflow: hidden;
+  overflow: visible; 
 }
+
 
 .card-img {
   width: 100%;

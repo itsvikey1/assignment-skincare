@@ -2,7 +2,8 @@
 
 .card2-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   background-color: #fefef4;
   padding: 4rem 2rem;
@@ -10,8 +11,9 @@
 }
 
 .card2-img-container {
-  width: 850px;
-  height: 900px;
+  flex: 1 1 50%;
+  max-width: 650px;         /* ✅ reduced from 850px */
+  height: 500px;            /* ✅ reduced from 600px */
   border-radius: 30px;
   position: relative;
   overflow: hidden;
@@ -26,8 +28,8 @@
 
 .card2-help-wrapper {
   position: absolute;
-  bottom: 40px;
-  left: 40px;
+  bottom: 20px;
+  left: 20px;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -43,22 +45,26 @@
 .card2-help-text {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   color: #2d3b36;
 }
 
 .card2-content {
-  max-width: 700px;
+  flex: 1 1 45%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .card2-faq-button {
-  width: 341px;
-  height: 60px;
+  width: fit-content;
+  padding: 1rem 2rem;
   border-radius: 100px;
   background-color: #fefef4;
   border: 1px solid #2d3b36;
   font-family: 'Inter', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   color: #2d3b36;
   margin-bottom: 1.5rem;
   cursor: pointer;
@@ -67,12 +73,12 @@
 .card2-heading {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 60px;
-  line-height: 1;
+  font-size: 42px;
+  line-height: 1.2;
   letter-spacing: -0.02em;
-  background: rgba(45, 59, 54, 1);
+  background: #2d3b36;
   color: #fefef4;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 20px;
   margin-bottom: 2rem;
 }
@@ -84,13 +90,13 @@
 }
 
 .faq-question {
-  width: 600px;
+  width: 100%;
   min-height: 70px;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 1px solid #2d3b36;
   background-color: #fefef4;
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,7 +119,33 @@
 
 .faq-answer {
   margin-top: 0.75rem;
-  font-size: 16px;
-  line-height: 1.4;
+  font-size: 15px;
+  line-height: 1.5;
   color: #2d3b36;
+}
+
+/* ✅ Responsive Layout for Smaller Screens */
+@media (max-width: 1024px) {
+  .card2-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card2-img-container,
+  .card2-content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .card2-heading {
+    font-size: 28px;
+  }
+
+  .card2-faq-button {
+    font-size: 16px;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
 }
